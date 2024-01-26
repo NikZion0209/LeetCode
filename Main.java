@@ -1,15 +1,12 @@
-import out_of_bounds_path_576.Solution;
+import two_sum_1.Solution;
 
 public class Main {
     public static void main(String[] args) {
-        int m = 1;
-        int n = 2;
-        int maxMove = 50;
-        int startRow = 0;
-        int startColumn = 0;
+        int[] nums = {7,11,15,2};
+        int target = 9;
 
         Solution solution = new Solution();
-        int num = solution.findPaths(m, n, maxMove, startRow, startColumn);
+        int[] num = solution.twoSum(nums, target);
         System.out.println(num);
     }
 }
