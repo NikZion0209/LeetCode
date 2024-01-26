@@ -1,12 +1,15 @@
-import common_subsequence_1143.Solution;
+import out_of_bounds_path_576.Solution;
 
 public class Main {
     public static void main(String[] args) {
-        String text1 = "mhunuzqrkzsnidwbun";
-        String text2 = "szulspmhwpazoxijwbq";
+        int m = 1;
+        int n = 2;
+        int maxMove = 50;
+        int startRow = 0;
+        int startColumn = 0;
 
         Solution solution = new Solution();
-        int num = solution.longestCommonSubsequence(text1, text2);
+        int num = solution.findPaths(m, n, maxMove, startRow, startColumn);
         System.out.println(num);
     }
 }
