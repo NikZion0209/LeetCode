@@ -1,12 +1,13 @@
-import two_sum_1.Solution;
+import add_two_numbers_2.*;
 
 public class Main {
     public static void main(String[] args) {
-        int[] nums = {7,11,15,2};
-        int target = 9;
-
         Solution solution = new Solution();
-        int[] num = solution.twoSum(nums, target);
-        System.out.println(num);
+        ListNode l1 = solution.createList(2, 4, 9);
+
+        ListNode l2 = solution.createList(5, 6, 4, 9);
+
+        ListNode result = solution.addTwoNumbers(l1, l2);
+        result.printList();
     }
 }
