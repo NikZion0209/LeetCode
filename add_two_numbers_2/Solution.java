@@ -65,3 +65,45 @@ public class Solution {
         return head;
     }
 }
+
+/* Optimized:
+ *
+ * public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+ * ListNode cur = null;
+ * ListNode p = null;
+ * ListNode h = null;
+ * int val = 0;
+ * int carry = 0;
+ * int d = 0;
+ * while (l1 != null || l2 != null) {
+ * val = carry;
+ * if (l1 != null) {
+ * val += l1.val;
+ * l1 = l1.next;
+ * }
+ * if (l2 != null) {
+ * val += l2.val;
+ * l2 = l2.next;
+ * }
+ * //compute val and save to d,carry
+ * d = val%10;
+ * carry = val/10;
+ * //create current node
+ * cur = new ListNode(d);
+ * //link current to p
+ * if (p != null) {
+ * p.next = cur;
+ * }
+ * //save previous node
+ * p = cur;
+ * //set head if needed
+ * if (h == null) {
+ * h = cur;
+ * }
+ * }
+ * if (carry == 1) {
+ * p.next = new ListNode(1);
+ * }
+ * return h;
+ * }
+ */
